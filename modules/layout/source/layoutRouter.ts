@@ -1,5 +1,5 @@
 import BaseRouter from "@router/baseRouter";
-import DashboardView from "./views/subjects";
+import LayoutView from "./views/layout";
 
 /**
  * Роутер для модуля документации
@@ -7,8 +7,8 @@ import DashboardView from "./views/subjects";
  * @param url - маршрут
  */
 
-let routerSubjects = new BaseRouter();
+let layoutRouter = new BaseRouter();
 
-routerSubjects.addView("subjects", DashboardView);
+layoutRouter.addView("layout", LayoutView);
 
-export default routerSubjects;
+export default layoutRouter;

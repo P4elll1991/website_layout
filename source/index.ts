@@ -1,7 +1,6 @@
 import { JetApp, HashRouter } from "webix-jet";
 import routerDashboard from "@modules/dashboard/source/dashboardRouter";
-import routerSubjects from "@modules/subjects/source/subjectsRouter";
-import routerScripter from "@modules/scripts/source/scripterRouter";
+import layoutRouter from "@modules/layout/source/layoutRouter"
 const App = new JetApp({
   id: "dashboard",
   start: "/dashboard",
@@ -9,8 +8,7 @@ const App = new JetApp({
   views: function (url: string): any {
     return (
       routerDashboard.getView(url) ||
-      routerSubjects.getView(url) ||
-      routerScripter.getView(url)
+      layoutRouter.getView(url) 
     );
   },
 });
