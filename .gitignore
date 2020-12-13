@@ -1,0 +1,12 @@
+test-results/
+tmp/
+routes/
+node_modules
+package-lock.json
+public/dist
+.idea/
+.vscode/
+target/
+app/views/App/Index.html
+none
+go.mod
