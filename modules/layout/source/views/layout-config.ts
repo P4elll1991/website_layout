@@ -19,7 +19,7 @@ export default function LayoutConfig() {
                     { view: 'resizer' },
                     {
                         header: 'Дерево блоков',
-                        width: 300,
+                        width: 450,
                         body: TreeBlocksView,
                     },
                 ],
