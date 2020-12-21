@@ -6,7 +6,7 @@ import { ParamType } from './func'
 // Событие блока
 export class EventTag {
     id: string
-    type: EventTagkType // тип события
+    type: EventTagType // тип события
     params: any[] // параметры передаваемые функции
     function: Func // Функция которая выполняется при этом событии
 }
@@ -28,7 +28,8 @@ export class Attr {
 export class Tag {
     id: string // ай-ди элемента
     order: number // Порядок контейнера в родительском контейнере
-    name: TagType // Название элемента
+    name: string // Название
+    type: TagType // Название элемента
     description: string // Описание элемента (данного)
     description_type: string // Описание типа элемента
     attr: Attr[] //  аттрибуты
@@ -81,7 +82,7 @@ export enum TagType {
 }
 
 // Тип события элемента DOM
-export enum EventTagkType {
+export enum EventTagType {
     ON_BLUR = 'onblur', //Потеря фокуса
     ON_CHANGE = 'onchange', //Изменение значения элемента формы.
     ON_CLICK = 'onclick', //Щелчок левой кнопкой мыши на элементе.
