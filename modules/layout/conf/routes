@@ -1,0 +1,2 @@
+# Получение структуры проекта
+GET     /project/:id          CProject.GetProject

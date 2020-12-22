@@ -1,6 +1,8 @@
 package app
 
 import (
+	"website_layout/modules/db"
+
 	"github.com/revel/revel"
 )
 
@@ -28,6 +30,7 @@ func init() {
 		revel.CompressFilter,          // Compress the result.
 		revel.BeforeAfterFilter,       // Call the before and after filter functions
 		revel.ActionInvoker,           // Invoke the action.
+
 	}
 
 	// Register startup functions with OnAppStart
@@ -36,6 +39,17 @@ func init() {
 	// revel.OnAppStart(ExampleStartupScript)
 	// revel.OnAppStart(InitDB)
 	// revel.OnAppStart(FillCache)
+
+	
+	revel.OnAppStart(initDB)
+}
+
+func initDB() {
+	err := db.New()
+	if err != nil {
+		revel.AppLog.Errorf("Ошибка подключения к базе: %s", err.Error())
+	}
+	
 }
 
 // HeaderFilter adds common security headers

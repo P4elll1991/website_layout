@@ -13,3 +13,5 @@ export class Project {
     tags: Tag[] // html
     functions: Func[] // js
 }
+
+export let project: Project
