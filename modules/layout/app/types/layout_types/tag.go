@@ -1,7 +1,7 @@
 package layout_types
 
 import (
-    "website_layout/modules/layout/app/types/layout_types/styles"
+	"website_layout/modules/layout/app/types/layout_types/styles"
 )
 
 // Событие блока
@@ -33,7 +33,7 @@ type Tag  struct{
     Type TagType // Название элемента
     Description string // Описание элемента (данного)
     Description_type string // Описание типа элемента
-    Attr []Attr //  аттрибутыs
+    Attr []Attr //  аттрибуты
     Styles []styles.IStyle // Стили элемента
     Classes []Selector // Классы елемента
     Events []EventTag // События элемента
